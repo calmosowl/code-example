@@ -1,0 +1,15 @@
+/*
+<div class="u-text-accent">Accent</div>
+*/
+
+@each $color-key, $color-variants in $palette {
+  .u-text-#{$color-key} {
+    color: $color-variants;
+  }
+}
+
+@each $color-key, $color-variants in $neutral-palette {
+  .u-text-neutral-#{$color-key} {
+    color: $color-variants;
+  }
+}
