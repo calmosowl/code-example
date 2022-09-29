@@ -1,3 +1,32 @@
 :root {
+  --primary-base-color: #000000;
+  --secondary-base-color: #ffffff;
+  --g-text-color: var(--primary-base-color);
+  --g-background-color: var(--secondary-base-color);
+}
 
+/* Palette */
+:root {
+  --accent-base-color: #1a4f8b;
+  --accent-dark-color: #0a315d;
+  --neutral-dark-color: #767676;
+  --neutral-medium-color: #aeaeae;
+  --neutral-light-color: #b0b0b0;
+  --neutral-lighter-color: #c3c3c3;
+}
+
+/* Form-controls */
+:root {
+  --g-form-control-height: 50px;
+  --g-form-control-placeholder-color: var(--neutral-dark-color);
+  --g-form-control-border: 1px solid var(--neutral-lighter-color);
+  --g-form-control-border-radius: 5px;
+}
+
+/* Buttons */
+:root {
+  --g-button-font-size: 16px;
+  --g-button-height: var(--g-form-control-height);
+  --g-button-padding: 0 50px;
+  --g-button-border-radius: 8px;
 }
