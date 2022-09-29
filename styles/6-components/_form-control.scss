@@ -1,0 +1,51 @@
+/*
+<div class="form-control">
+  <input type="password" placeholder="password">
+</div>
+*/
+
+.form-control {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  height: var(--g-form-control-height);
+  padding: 0 25px 0 12px;
+  border: var(--g-form-control-border);
+  border-radius: var(--g-form-control-border-radius);
+
+  &:hover {
+    --g-form-control-border: 1px solid var(--neutral-dark-color);
+  }
+
+  &:active, &:focus-within {
+    --g-form-control-border: 1px solid var(--accent-base-color);
+
+    .form-control-icon {
+      fill: var(--accent-base-color);
+    }
+
+    ::placeholder {
+      --g-form-control-placeholder-color: var(--accent-base-color);
+    }
+  }
+
+  input {
+    color: currentColor;
+    width: 100%;
+    height: inherit;
+    border: 0 none transparent;
+    background-color: transparent;
+
+    &:active, &:focus {
+      outline: 0 none;
+    }
+  }
+
+  .form-control-icon {
+    fill: var(--neutral-medium-color);
+  }
+
+  ::placeholder {
+    color: var(--g-form-control-placeholder-color);
+  }
+}
