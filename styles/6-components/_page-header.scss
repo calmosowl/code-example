@@ -1,0 +1,17 @@
+/*
+<div class="page-header">
+  <div class="page-header-media">
+    <img src="assets/login-screen-page-media.svg" alt="login screen image">
+  </div>
+  <div class="page-header-title">
+    <h1 class="u-text-center">Welcome Back!</h1>
+  </div>
+</div>
+*/
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+}
