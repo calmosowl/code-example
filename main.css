@@ -251,6 +251,273 @@ summary {
   display: list-item;
 }
 
+:root {
+  --primary-base-color: #000000;
+  --secondary-base-color: #ffffff;
+  --g-text-color: var(--primary-base-color);
+  --g-background-color: var(--secondary-base-color);
+}
+
+/* Palette */
+:root {
+  --accent-base-color: #1a4f8b;
+  --accent-dark-color: #0a315d;
+  --neutral-dark-color: #767676;
+  --neutral-medium-color: #aeaeae;
+  --neutral-light-color: #b0b0b0;
+  --neutral-lighter-color: #c3c3c3;
+}
+
+/* Form-controls */
+:root {
+  --g-form-control-height: 50px;
+  --g-form-control-placeholder-color: var(--neutral-dark-color);
+  --g-form-control-border: 1px solid var(--neutral-lighter-color);
+  --g-form-control-border-radius: 5px;
+}
+
+/* Buttons */
+:root {
+  --g-button-font-size: 16px;
+  --g-button-height: var(--g-form-control-height);
+  --g-button-padding: 0 50px;
+  --g-button-border-radius: 8px;
+}
+
+html {
+  font-size: 16px;
+  line-height: 19px;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.1875em;
+  font-weight: 400;
+  color: var(--g-text-color);
+  height: 100%;
+  background-color: var(--g-background-color);
+}
+
 img {
   max-width: 100%;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.1667;
+  font-weight: 700;
+  margin: 0;
+}
+
+a {
+  color: var(--accent-base-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-dark-color);
+}
+
+.o-authentication-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/*
+<div class="page-header">
+  <div class="page-header-media">
+    <img src="assets/login-screen-page-media.svg" alt="login screen image">
+  </div>
+  <div class="page-header-title">
+    <h1 class="u-text-center">Welcome Back!</h1>
+  </div>
+</div>
+*/
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*
+<div class="form-control">
+  <input type="password" placeholder="password">
+</div>
+*/
+.form-control {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  height: var(--g-form-control-height);
+  padding: 0 25px 0 12px;
+  border: var(--g-form-control-border);
+  border-radius: var(--g-form-control-border-radius);
+}
+
+.form-control:hover {
+  --g-form-control-border: 1px solid var(--neutral-dark-color);
+}
+
+.form-control:active, .form-control:focus-within {
+  --g-form-control-border: 1px solid var(--accent-base-color);
+}
+
+.form-control:active .form-control-icon, .form-control:focus-within .form-control-icon {
+  fill: var(--accent-base-color);
+}
+
+.form-control:active ::placeholder, .form-control:focus-within ::placeholder {
+  --g-form-control-placeholder-color: var(--accent-base-color);
+}
+
+.form-control input {
+  color: currentColor;
+  width: 100%;
+  height: inherit;
+  border: 0 none transparent;
+  background-color: transparent;
+}
+
+.form-control input:active, .form-control input:focus {
+  outline: 0 none;
+}
+
+.form-control .form-control-icon {
+  fill: var(--neutral-medium-color);
+}
+
+.form-control ::placeholder {
+  color: var(--g-form-control-placeholder-color);
+}
+
+.authentication-form {
+  max-width: 344px;
+}
+
+/*
+<button type="button" class="button default is-accent">Reset</button>
+*/
+.button {
+  font-size: var(--g-button-font-size);
+  line-height: 1.25;
+  color: var(--secondary-base-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--g-button-height);
+  padding: var(--g-button-padding);
+  border: 1px solid transparent;
+  border-radius: var(--g-button-border-radius);
+  outline: none;
+  transition: background-color 0.1s ease-in 0s;
+  cursor: pointer;
+  position: relative;
+}
+
+.button.is-small {
+  --g-button-height: 40px;
+  --g-button-border-radius: 5px;
+  text-transform: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button.default.is-primary {
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.button.default.is-secondary {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.button.default.is-accent {
+  background-color: #1a4f8b;
+  border: 1px solid #1a4f8b;
+}
+
+.button-group {
+  display: flex;
+  gap: 14px;
+}
+
+.button-group .button {
+  flex: 1;
+}
+
+.facebook-button {
+  background-color: #385c8e;
+}
+
+.google-button {
+  background-color: #f14436;
+}
+
+/*
+<div class="u-text-right">Right</div>
+*/
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+/*
+<div class="u-text-accent">Accent</div>
+*/
+.u-text-primary {
+  color: #000000;
+}
+
+.u-text-secondary {
+  color: #ffffff;
+}
+
+.u-text-accent {
+  color: #1a4f8b;
+}
+
+.u-text-neutral-dark {
+  color: #767676;
+}
+
+.u-text-neutral-medium {
+  color: #aeaeae;
+}
+
+.u-text-neutral-light {
+  color: #b0b0b0;
+}
+
+.u-text-neutral-lighter {
+  color: #c3c3c3;
 }
