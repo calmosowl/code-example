@@ -1,0 +1,43 @@
+/*
+<button type="button" class="button default is-accent">Reset</button>
+*/
+
+.button {
+  font-size: var(--g-button-font-size);
+  line-height: 1.25;
+  color: var(--secondary-base-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--g-button-height);
+  padding: var(--g-button-padding);
+  border: 1px solid transparent;
+  border-radius: var(--g-button-border-radius);
+  outline: none;
+  transition: background-color 0.1s ease-in 0s;
+  cursor: pointer;
+  position: relative;
+
+  &.is-small {
+    --g-button-height: 40px;
+    --g-button-border-radius: 5px;
+
+    text-transform: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.button.default {
+  @each $color-key, $color-variants in $palette {
+    &.is-#{$color-key} {
+      background-color: $color-variants;
+      border: 1px solid $color-variants;
+    }
+  }
+}
