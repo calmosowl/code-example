@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Login</title>
+</head>
+<body>
+  <div class="o-authentication-layout">
+    <div class="page-header">
+      <div class="page-header-media">
+        <img src="assets/login-screen-page-media.svg" alt="login screen image">
+      </div>
+      <div class="page-header-title">
+        <h1 class="u-text-center">Welcome Back!</h1>
+      </div>
+    </div>
+
+    <form class="fieldset authentication-form">
+      <div class="form-group">
+        <div class="form-control">
+          <svg width="26" height="26" class="form-control-icon">
+            <use xlink:href="assets/icons.svg#contacts"></use>
+          </svg>
+          <input type="email" placeholder="example@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-control">
+          <svg width="26" height="26" class="form-control-icon">
+            <use xlink:href="assets/icons.svg#lock"></use>
+          </svg>
+          <input type="password" placeholder="password">
+        </div>
+        <a href="/app/reset-password/" class="u-text-right">Forgot Password?</a>
+      </div>
+      <!-- reduced gap from 50px (design) to 36px for consistency -->
+      <button type="button" class="button default is-accent">Log in</button>
+    </form>
+
+    <span class="u-text-neutral-light u-text-center">Or connect with social</span>
+
+    <div class="button-group">
+      <button type="button" class="button default is-small facebook-button">Facebook</button>
+      <button type="button" class="button default is-small google-button">Google</button>
+    </div>
+  </div>
+</body>
+</html>
